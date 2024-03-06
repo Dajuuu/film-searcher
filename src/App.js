@@ -4,14 +4,14 @@ import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 import "./App.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
+const API_URL = "http://www.omdbapi.com?apikey=e2e7aa58";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("");
   }, []);
 
   const searchMovies = async (title) => {
@@ -28,8 +28,11 @@ const App = () => {
       <div className="search">
         <input
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search for movies"
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            searchMovies(e.target.value); // Call searchMovies on input change
+          }}
+          placeholder="Write at least 3 characters"
         />
         <img
           src={SearchIcon}
