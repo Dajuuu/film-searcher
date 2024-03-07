@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 import "./App.css";
 
+// api key and link
 const API_URL = "http://www.omdbapi.com?apikey=e2e7aa58";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
 
-  useEffect(() => {
-    searchMovies("");
-  }, []);
-
+  // search for movies based on the input
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
 
+    // update the list
     setMovies(data.Search);
   };
 
   return (
+    // class "app" is not used, but it is the main div
     <div className="app">
       <div className="header">
         <h1>FilmSearcher</h1>
@@ -41,6 +41,7 @@ const App = () => {
           />
         </div>
       </div>
+      {/* if search results are empty, display a text */}
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
