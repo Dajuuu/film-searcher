@@ -16,25 +16,32 @@
 
 body {
   font-family: var(--font-josefin);
-  background-color: #c2fcf7;
+  background-color: #3E5C76;
 }
 
 .app {
-  padding: 4rem;
+  /* padding: 4rem; */
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: #1D2D44;
+}
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.9px;
   background: linear-gradient(
     90deg,
-    rgb(4, 15, 15) 80%,
-    rgba(249, 211, 180, 0) 100%
+    rgb(204, 207, 142) 10%,
+    rgb(62, 92, 118) 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -43,31 +50,35 @@ h1 {
 }
 
 .search {
-  width: 71%;
-  margin: 4rem 0 2rem;
+  width: 350px;
+  /* margin: 4rem 0 2rem; */
 
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  padding: 1.5rem 1.75rem;
-  border-radius: 3rem;
-  background: #85bdbf;
+  /* justify-content: right; */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #748CAB;
   /* -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527; */
-  box-shadow: 1px 2px 6px #57737a, -5px -5px 7px #496065;
+  /* box-shadow: 1px 2px 6px #57737a, -5px -5px 7px #496065; */
 }
 
 .search input {
   flex: 1;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: var(--font-raleway);
   font-weight: 500;
-  padding-right: 1rem;
-
+  /* padding-right: 1rem; */
+  /* padding: 0.5rem; */
   outline: none;
-  color: white;
-  background: #85bdbf;
+  color: #fff;
+  background: #748CAB;
+}
+
+.search input::placeholder {
+  color: #bcbaba;
 }
 
 .search img {
@@ -75,6 +86,7 @@ h1 {
   height: 35px;
   cursor: pointer;
 }
+
 
 /* .search button {
   padding: 20px 40px;
@@ -92,7 +104,7 @@ h1 {
 } */
 
 .empty {
-  width: 100%;
+  /* width: 100%; */
   margin-top: 3rem;
 
   display: flex;
@@ -101,8 +113,8 @@ h1 {
 }
 
 .empty h2 {
-  font-size: 1.25rem;
-  color: #f9d3b4;
+  font-size: 1.5rem;
+  color: #F0EBD8;
   font-family: var(--font-raleway);
 }
 
@@ -194,7 +206,7 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-  .app {
+  /* .app {
     padding: 4rem 2rem;
   }
 
@@ -210,11 +222,11 @@ h1 {
   .search img {
     width: 20px;
     height: 20px;
-  }
+  } */
 }
 
 @media screen and (max-width: 400px) {
-  .app {
+  /* .app {
     padding: 4rem 1rem;
   }
 
@@ -229,5 +241,5 @@ h1 {
   .movie {
     width: "100%";
     margin: 1rem;
-  }
+  } */
 }

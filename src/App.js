@@ -23,24 +23,24 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>FilmSearcher</h1>
-
-      <div className="search">
-        <input
-          value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-            searchMovies(e.target.value); // Call searchMovies on input change
-          }}
-          placeholder="Write at least 3 characters"
-        />
-        <img
-          src={SearchIcon}
-          alt="search"
-          onClick={() => searchMovies(searchTerm)}
-        />
+      <div className="header">
+        <h1>FilmSearcher</h1>
+        <div className="search">
+          <input
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              searchMovies(e.target.value);
+            }}
+            placeholder="Write at least 3 characters"
+          />
+          <img
+            src={SearchIcon}
+            alt="search"
+            onClick={() => searchMovies(searchTerm)}
+          />
+        </div>
       </div>
-
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
