@@ -5,7 +5,7 @@ import SearchIcon from "./search.svg";
 import "./App.css";
 
 // api key and link
-const API_URL = "http://www.omdbapi.com?apikey=e2e7aa58";
+const API_URL = "https://www.omdbapi.com?apikey=e2e7aa58";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
